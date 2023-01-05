@@ -20,11 +20,11 @@ h1 {
 }
 
 p {
-  font-family: verdana;
+  font-family: helvetica;
   font-size: 20px;
-text-align: center;
+text-align: block;
 background-color: rgb(100, 255, 146) ; 
-margin: 3;
+margin: 8;
 
 
 }
@@ -91,9 +91,10 @@ body {
 
   
   <ul class="tabs">
-    <li data-tab-target="#home" class="active tab">Home</li>
-    <li data-tab-target="#Hobbies" class="tab">Hobbies</li>
-    <li data-tab-target="#about" class="tab">Something Interesting</li>
+    <li data-tab-target="#home" class="active tab">HOME</li>
+    <li data-tab-target="#Hobbies" class="tab">HOBBIES</li>
+    <li data-tab-target="#about" class="tab">SOMETHING INTERESTING</li>
+    <li data-tab-target="#contact" class="tab">CONTACT ME</li>
   </ul>
 
 
@@ -105,7 +106,7 @@ body {
 
   <br>
 
-  <img src="pictorr.jpg" width="230" height="260" class ="center">
+  <img src="pictorr.jpg" width="230" height="260" class ="left">
 
   <br>
   
@@ -122,6 +123,10 @@ body {
       <h1>Something Interesting</h1>
       <p>"..."</p>
     </div>
+
+    <div id="contact" data-tab-content></div>
+    <h1>CONTACT ME</h1>
+      <p>" 1123-456-789"</p>
   </div>
 
 </body>
