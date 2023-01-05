@@ -36,18 +36,71 @@ margin: 3;
   
 } 
 
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid black;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab.active {
+  background-color: #CCC;
+}
+
+.tab:hover {
+  background-color: #AAA;
+}
+
+.tab-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
 
 </style>
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="index.js" defer></script>
 <title>a very normal site</title>
 </head>
 <body>
 
   
+  <ul class="tabs">
+    <li data-tab-target="#home" class="active tab">Home</li>
+    <li data-tab-target="#Hobbies" class="tab">Hobbies</li>
+    <li data-tab-target="#about" class="tab">Something Interesting</li>
+  </ul>
 
-<H1>Hello there </H1>
+
+
+  <div class="tab-content">
+    <div id="home" data-tab-content class="active">
+      <h1>Home</h1>
+      <H1>Hello there </H1>
 
   <br>
 
@@ -59,8 +112,16 @@ margin: 3;
     <br>in the northeast section of Taguig, where all the villas are, 
   <br>and I am not married. I am a BSIT student at Asia Pacific College, and I get home every day 
   <br>by 8 PM at the latest.  I'm in bed by 11 pm and make sure I get eight hours of sleep, no matter what. </p>
-
-
+    </div>
+    <div id="Hobbies" data-tab-content>
+      <h1>Hobbies </h1>
+      <p> " I often find my earnings buying useless stuff. "  </p>
+    </div>
+    <div id="about" data-tab-content>
+      <h1>Something Interesting</h1>
+      <p>"..."</p>
+    </div>
+  </div>
 
 </body>
 </html>
