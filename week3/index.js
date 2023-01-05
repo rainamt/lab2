@@ -1,19 +1,16 @@
-var tabButtons=documnent.querySelectorAll(".tabContainer .buttonCOntainer .button ")
-var tabPanels=document.querySelectorAll(" .tabContainer .tabPanel");
+const tabs = document.querySelectorAll('[data-tab-target]')
+const tabContents = document.querySelectorAll('[data-tab-content]')
 
-function showPanel(panelIndex,colorCode) {
-    tabButtons.forEach(function(node) {
-    node.style.backgroundColor="";
-    node.style.Color="";
-    
-    } ); 
-
-tabButtons[panelIndex].style.backgroundColor=colorCode;
-tabButton[panelIndex].style.color="white";
-tabPanels.forEach(function(node) {
-    node.style.display="none"; 
-});
-
-tabPanels[panelIndex].style.display="block";
-tabPanels[panelIndex].style.display= colorCode;
-}
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = document.querySelector(tab.dataset.tabTarget)
+    tabContents.forEach(tabContent => {
+      tabContent.classList.remove('active')
+    })
+    tabs.forEach(tab => {
+      tab.classList.remove('active')
+    })
+    tab.classList.add('active')
+    target.classList.add('active')
+  })
+})
