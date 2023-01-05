@@ -46,7 +46,8 @@ height: 15%;
 }
 
 .tabContainer .buttonContainer {
-  font-family: sans;
+  font-family:Helvetica;
+  font-size: 10px;
   height: 100%;
   width: 25%;
   float: left;
@@ -59,6 +60,15 @@ height: 15%;
   .tabContainer .buttonContainer button:hover {
     background-color: blue;}
 
+    .tabContainer .tabPanel{
+
+      background-color:aquamarine;
+      color:brown;
+      text-align: center;
+      box-sizing: border-box;
+      padding-top: 105px;
+    }
+
 </style>
 
 <head>
@@ -67,10 +77,10 @@ height: 15%;
 <body>
 
   <div class = "tabContainer">
-    <button> Home </button>
-    <button>Hobbies</button>
-    <button>Something Interesting </button>
-    <button>Contact me</button>
+    <button onClick ="showPanel" (0,"#f44336") > Home </button>
+    <button onClick ="showPanel" (0,"#f44336")>Hobbies</button>
+    <button onClick ="showPanel" (0,"#f44336")>Something Interesting </button>
+    <button onClick ="showPanel" (0,"#f44336")>Contact me</button>
 
 </div>
 
