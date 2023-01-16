@@ -12,6 +12,7 @@ h1 {
   color: rgb(42, 63, 52);
   text-align: center;
   
+  
 
 }
 
@@ -132,14 +133,16 @@ body {
     </div>
   
 <body>  
+  <div style = "position: relative; z-index:2; bottom:300ox;"
     <h1 id="welcome"> Hello There,  </h1>  
+    </div>
   </body>
   
   <script type = "text/javascript">
     var nickname = prompt("Please enter your name: ");
     if (nickname != null) {
       document.getElementById("welcome").innerText =
-      "Hello, " + nickname + "!";
+      "Hello There," + nickname + "!";
     }
   </script> 
       
