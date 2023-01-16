@@ -131,17 +131,18 @@ body {
   <img src="pictorr.jpg" width="230" height="260">
     </div>
   
-  <script> 
-
-var name = prompt("ENTER NAME", "");
-if (name!= null) {
-    document.getElementById("welcome").innerHTML = "Hello There," + name;}
-
-</script>
+<body>  
+    <h1 id="welcome"> Hello There,  </h1>  
+  </body>
+  
+  <script type = "text/javascript">
+    var nickname = prompt("Please enter your name: ");
+    if (nickname != null) {
+      document.getElementById("welcome").innerText =
+      "Hello, " + nickname + "!";
+    }
+  </script> 
       
-      <body>
-      <h1 id ="welcome"></h1>
-      </body>
  <p> My name is Raina Terania. I'm 19 years old. My house is 
     <br>in the northeast section of Taguig, where all the villas are, 
     <br>and I am not married. I am a BSIT student at Asia Pacific 
