@@ -304,11 +304,42 @@ background-color: #7A9e9f;">
   color:rgb(70, 29, 43, 0.98);
   background-color: #8779ff;">
   
-<p id="COMMS"></p>
+  <p id="comm"></p>
 
-<script>
-document.getElementById("COMMS").innerHTML = 5 & 1;
-</script>
+</div>
+    
+    
+      <script>
+      function doSomething() {
+    let userInt = documentquerySelector("#ans");
+      
+          // Create a Map
+          const art = new Map([
+            ["1", 500],
+            ["2", 1000],
+            ["3", 1500],
+            ["4", "Messege me for more info"]
+          
+          ]);
+          
+         
+          {document.getElementById("comm").innerHTML = art.get("1")
+          if(userInt=2){
+            document.getElementById("comm").innerHTML = art.get("2");
+
+            
+          }
+        };
+          
+          if(userInt=3){
+            document.getElementById("comm").innerHTML = art.get("3");
+          }
+          else{
+            document.getElementById("comm").innerHTML = art.get("4");
+          }
+          
+      }
+        </script>
     
       
 
