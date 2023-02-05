@@ -10,8 +10,7 @@
         <li><a href="index.php#contact">Links</a></li>
     
   </ul>
-   <div style = "text-align: center;
-    color:rgb(85, 19, 19);">
+   <div id = "form">
 <br><br><br><br>
 <?php
 
