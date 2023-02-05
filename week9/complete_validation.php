@@ -10,7 +10,7 @@
         <li><a href="index.php#contact">Links</a></li>
     
   </ul>
-   <div id = "form">
+   <div class = "form">
 <br><br><br><br>
 <?php
 
