@@ -1,12 +1,25 @@
 <!DOCTYPE HTML>  
 <html>
 <head>
+
+<link rel="stylesheet" href="forms.css">
+=======
+
 <style>
 .error {color: #FF0000;}
 </style>
 </head>
 <body>  
 
+<ul class="tabs">
+    <li><a href="#home">Home</a></li>
+        <li><a href="#Hobbies">Hobbies</a></li>
+        <li><a href="#contact">Links</a></li>
+    
+  </ul>
+
+
+>>>>>>> 4d0474dd77f732edbb5549f658c94c4f1895aa01
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
@@ -64,7 +77,11 @@ function test_input($data) {
 }
 ?>
 
+
+<h2>REQUEST COMMISSION FORM</h2>
+=======
 <h2>PHP Form Validation Example</h2>
+
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name" value="<?php echo $name;?>">
@@ -73,9 +90,12 @@ function test_input($data) {
   E-mail: <input type="text" name="email" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
+
+
   Website: <input type="text" name="website" value="<?php echo $website;?>">
   <span class="error"><?php echo $websiteErr;?></span>
   <br><br>
+
   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   <br><br>
   Gender:
@@ -92,8 +112,12 @@ echo "<h2>Your Input:</h2>";
 echo $name;
 echo "<br>";
 echo $email;
+
+
+=======
 echo "<br>";
 echo $website;
+
 echo "<br>";
 echo $comment;
 echo "<br>";
