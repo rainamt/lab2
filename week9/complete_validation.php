@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>  
 <html>
 <head>
-  <link rel="stylesheet" href="forms.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>  
 <ul class="tabs">
@@ -10,11 +10,7 @@
         <li><a href="#contact">Links</a></li>
     
   </ul>
-   <style> 
-   background-image: url("BG.svg");
-    overflow-x: hidden;
-    background-size: 100%;
-   </style>
+   
 <br><br><br><br><br><br><br><br><br><br><br>
 <?php
 
