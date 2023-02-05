@@ -10,7 +10,8 @@
         <li><a href="index.php#contact">Links</a></li>
     
   </ul>
-   
+   <div style = "text-align: center;
+    color:rgb(85, 19, 19);">
 <br><br><br><br>
 <?php
 
@@ -62,6 +63,6 @@ echo $message;
 echo "<br>";
 echo $style;
 ?>
-
+ </div>
 </body>
 </html>
