@@ -3,7 +3,6 @@
 <head>
 
 <link rel="stylesheet" href="forms.css">
-=======
 
 <style>
 .error {color: #FF0000;}
@@ -19,7 +18,7 @@
   </ul>
 
 
->>>>>>> 4d0474dd77f732edbb5549f658c94c4f1895aa01
+
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
@@ -79,8 +78,8 @@ function test_input($data) {
 
 
 <h2>REQUEST COMMISSION FORM</h2>
-=======
-<h2>PHP Form Validation Example</h2>
+
+
 
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
