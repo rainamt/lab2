@@ -272,7 +272,7 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
     color:rgb(61, 27, 116);
     background-color: #4bff63;"> 
 
-    <a style="text-decoration: none" href="resource.html ">RESOURCES HERE!!</a>
+    <a style="text-decoration: none" href="resource.php ">RESOURCES HERE!!</a>
       
 
       
