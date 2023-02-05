@@ -81,7 +81,11 @@ p.center {
   body {
     background-image: url("BG.svg");
     overflow-x: hidden;
-    background-size: 100%;}
+    background-size: 100%;
+    text-align: center;
+    color:rgb(43, 11, 11);
+    
+  }
 
 
     #introduction{
