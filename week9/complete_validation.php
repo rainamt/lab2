@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="forms.css">
 </head>
 <body>  
-<div class="navbar">
+<div class="tabs">
     <ul>
         <li><a href="index.php#home">HOME</a></li>
         <li><a href="index.php#Hobbies">HOBBIES</a></li>
