@@ -187,18 +187,18 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
        
     </div>
   </div>
-  <div style ="position:relative;  text-align:center; top:300px;
+  <div style ="position:relative;  text-align:center; bottom:70px; left: 360px;
 
    
     
-    width: 5%;
+    width: 50%;
    
-     font-family:'Helvetica';
-     font-size: 20px;
+     font-family:'Franklin Gothic Medium';
+     font-size: 50px;
    color:rgb(77, 50, 50);
-   background-color: #7A9e9f;
+   background-color: #103536;
      ">
-  
+     <a style="text-decoration: none; color:rgb(222, 230, 116);" href="complete_validation.php"> COMMISSION FORM</a></li>
 </div>
 
 
@@ -232,16 +232,16 @@ background-color: #7A9e9f;"> <h1> DRAWINGS</h1> </div>
     margin-right:2px;
      padding: 5px;
      width: 18%;
-    
+    text-align:center;
       font-family:'Helvetica';
       font-size: 20px;
     color:rgb(132, 236, 63);
     background-color: #102d2e;
     ">
       PHONE: 023483948 
-      <a style="text-decoration: none" href="https://www.facebook.com/">FACEBOOK</a>
+      <a style=" color:rgb(132, 236, 63); text-decoration: none" href="https://www.facebook.com/">FACEBOOK</a>
       <br>
-      <a style="text-decoration: none" href="https://www.instagram.com/">INSTAGRAM</a>
+      <a style="color:rgb(132, 236, 63); text-decoration: none" href="https://www.instagram.com/">INSTAGRAM</a>
       <br>
       BUSINESS EMAIL: rterania@student.apc.edu.ph
       <p id="des"></p>
