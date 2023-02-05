@@ -4,15 +4,17 @@
   <link rel="stylesheet" href="forms.css">
 </head>
 <body>  
-<div class="tabs">
-    <ul>
-        <li><a href="index.php#home">HOME</a></li>
-        <li><a href="index.php#Hobbies">HOBBIES</a></li>
-        <li><a href="index.php#Contact">LINKS</a></li>
-        
-       
-      </ul>
-  </div>
+<ul class="tabs">
+    <li><a href="#home">Home</a></li>
+        <li><a href="#Hobbies">Hobbies</a></li>
+        <li><a href="#contact">Links</a></li>
+    
+  </ul>
+   <style> 
+   background-image: url("BG.svg");
+    overflow-x: hidden;
+    background-size: 100%;
+   </style>
 <br><br><br><br><br><br><br><br><br><br><br>
 <?php
 
