@@ -44,9 +44,9 @@ function test_input($data) {
   Message: <textarea name="message" rows="5" cols="40"></textarea>
   <br><br>
   Style:
-  <input type="radio" name="style" value="female">OUTLINE
-  <input type="radio" name="style" value="male">COLOR
-  <input type="radio" name="style" value="other">FULLY RENDERED
+  <input type="radio" name="style" value="OUTLINE">OUTLINE
+  <input type="radio" name="style" value="COLOR">COLOR
+  <input type="radio" name="style" value="FULLY RENDERED">FULLY RENDERED
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
