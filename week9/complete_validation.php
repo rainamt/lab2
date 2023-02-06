@@ -71,9 +71,9 @@ echo $style;
 if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 
 $servername = "localhost";
-$username = "root";
+$username = "rterania";
 $password = "";
-$dbname = "myDB";
+$dbname = "mydb";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
