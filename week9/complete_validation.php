@@ -72,7 +72,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 
 $servername = "localhost";
 $username = "rterania";
-$password = "";
+$password = "rterania";
 $dbname = "mydb";
 
 // Create connection
