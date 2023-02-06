@@ -126,9 +126,9 @@ $sql = "INSERT INTO request (firstname, email, payment, comment, style)
 VALUES ('$name', '$email', '$payment', '$comment', '$style' )";
 
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+  echo " <br> New record created successfully";
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+  echo " <br> Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
