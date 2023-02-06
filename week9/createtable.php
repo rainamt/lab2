@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 
 // sql to create table
 $sql = "CREATE TABLE request (
-name VARCHAR(30) PRIMARY KEY,
+firstname VARCHAR(30) PRIMARY KEY,
 email VARCHAR(30) NOT NULL,
 payment VARCHAR(50) NOT NULL,
 comment VARCHAR(50) NOT NULL,
