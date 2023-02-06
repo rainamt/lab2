@@ -85,9 +85,9 @@ function test_input($data) {
   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   <br><br>
   Style:
-  <input type="radio" name="style" <?php if (isset($style) && $style=="female") echo "checked";?> value="female">Female
-  <input type="radio" name="style" <?php if (isset($style) && $style=="male") echo "checked";?> value="male">Male
-  <input type="radio" name="style" <?php if (isset($style) && $style=="other") echo "checked";?> value="other">Other  
+  <input type="radio" name="style" <?php if (isset($style) && $style=="Outline") echo "checked";?> value="Outline">Outline
+  <input type="radio" name="style" <?php if (isset($style) && $style=="Color") echo "checked";?> value="Color">Color
+  <input type="radio" name="style" <?php if (isset($style) && $style=="Fully Rendered") echo "checked";?> value="Fully Rendered">Fully Rendered  
   <span class="error">* <?php echo $styleErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
