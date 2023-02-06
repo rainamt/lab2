@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "rterania";
+$password = "rterania";
 $dbname = "Commissions";
 
 // Create connection
