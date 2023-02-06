@@ -73,7 +73,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 $servername = "localhost";
 $username = "rterania";
 $password = "";
-$dbname = "myrequests";
+$dbname = "requests";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -82,7 +82,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO MyGuests (name, payment, email, message, style)
+$sql = "INSERT INTO requests (name, payment, email, message, style)
 VALUES ('$name', '$payment', '$email', '$message', '$style')";
 
 if ($conn->query($sql) === TRUE) {
