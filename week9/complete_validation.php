@@ -34,7 +34,7 @@ function test_input($data) {
 ?>
 
 <h2> REQUEST COMMISSION</h2>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["REQUEST_METHOD"]);?>">  
   Name: <input type="text" name="name">
   <br><br>
   E-mail: <input type="text" name="email">
