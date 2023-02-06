@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>  
 <html>
-
+<body> 
 
 <?php
 $servername = "localhost";
