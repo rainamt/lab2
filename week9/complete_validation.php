@@ -122,7 +122,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO request (firstname, email, payment, comment, style)
+$sql = "INSERT INTO request (name, email, payment, comment, style)
 VALUES ('$name', '$email', '$payment', '$comment', '$style' )";
 
 if ($conn->query($sql) === TRUE) {
