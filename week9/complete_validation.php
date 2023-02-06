@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if (empty($_POST["style"])) {
-    $styleErr = "style is required";
+    $styleErr = "Style is required";
   } else {
     $style = test_input($_POST["style"]);
   }
@@ -111,8 +111,8 @@ echo $style;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "rterania";
+$password = "rterania";
 $dbname = "Commissions";
 
 // Create connection
