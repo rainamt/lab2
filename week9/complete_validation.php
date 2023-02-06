@@ -70,7 +70,7 @@ function test_input($data) {
 }
 ?>
 
-<h2>PHP Form Validation Example</h2>
+<h2>Request Form</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name" value="<?php echo $name;?>">
@@ -111,8 +111,8 @@ echo $style;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $servername = "localhost";
-$username = "rterania";
-$password = "rterania";
+$username = "root";
+$password = "";
 $dbname = "Commissions";
 
 // Create connection
@@ -122,7 +122,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO request (firstname, email, payment, style)
+$sql = "INSERT INTO request (firstname, email, payment, comment, style)
 VALUES ('$name', '$email', '$payment', '$comment', '$style' )";
 
 if ($conn->query($sql) === TRUE) {
