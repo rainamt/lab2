@@ -14,15 +14,52 @@
     color:rgb(85, 19, 19);">
 <br><br><br><br>
 <?php
-
-$name = $email = $style = $message = $payment = "";
+// define variables and set to empty values
+$nameErr = $emailErr = $styleErr = $paymentErr = "";
+$name = $email = $style = $comment = $payment = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = test_input($_POST["name"]);
-  $email = test_input($_POST["email"]);
-  $payment = test_input($_POST["payment"]);
-  $message = test_input($_POST["message"]);
-  $style = test_input($_POST["style"]);
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed";
+    }
+  }
+  
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format";
+    }
+  }
+    
+  if (empty($_POST["payment"])) {
+    $payment = "";
+  } else {
+    $payment = test_input($_POST["payment"]);
+    // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$payment)) {
+      $paymentErr = "Invalid URL";
+    }
+  }
+
+  if (empty($_POST["comment"])) {
+    $comment = "";
+  } else {
+    $comment = test_input($_POST["comment"]);
+  }
+
+  if (empty($_POST["style"])) {
+    $styleErr = "style is required";
+  } else {
+    $style = test_input($_POST["style"]);
+  }
 }
 
 function test_input($data) {
@@ -33,20 +70,25 @@ function test_input($data) {
 }
 ?>
 
-<h2> REQUEST COMMISSION</h2>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["REQUEST_METHOD"]);?>">  
-  Name: <input type="text" name="name">
+<h2>PHP Form Validation Example</h2>
+<p><span class="error">* required field</span></p>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  Name: <input type="text" name="name" value="<?php echo $name;?>">
+  <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
-  E-mail: <input type="text" name="email">
+  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+  <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
-  Payment: <input type="text" name="payment">
+  Payment Form: <input type="text" name="payment" value="<?php echo $payment;?>">
+  <span class="error"><?php echo $paymentErr;?></span>
   <br><br>
-  Message: <textarea name="message" rows="5" cols="40"></textarea>
+  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   <br><br>
   Style:
-  <input type="radio" name="style" value="OUTLINE">OUTLINE
-  <input type="radio" name="style" value="COLOR">COLOR
-  <input type="radio" name="style" value="FULLY RENDERED">FULLY RENDERED
+  <input type="radio" name="style" <?php if (isset($style) && $style=="female") echo "checked";?> value="female">Female
+  <input type="radio" name="style" <?php if (isset($style) && $style=="male") echo "checked";?> value="male">Male
+  <input type="radio" name="style" <?php if (isset($style) && $style=="other") echo "checked";?> value="other">Other  
+  <span class="error">* <?php echo $styleErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
@@ -59,31 +101,29 @@ echo $email;
 echo "<br>";
 echo $payment;
 echo "<br>";
-echo $message;
+echo $comment;
 echo "<br>";
 echo $style;
 ?>
 
-
-
-
 <?php
-if ($_SERVER ["REQUEST_METHOD"] == "POST") {
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $servername = "localhost";
-$username = "root";
+$username = "rterania";
 $password = "";
-$dbname = "requests";
+$dbname = "myDB";
 
 // Create connection
-$conn = new requests($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO requests (name, payment, email, message, style)
-VALUES ('$name', '$payment', '$email', '$message', '$style')";
+$sql = "INSERT INTO MyGuests (name, email, payment, style)
+VALUES ('$name', '$email', '$payment', '$comment', '$style' )";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
@@ -95,8 +135,6 @@ $conn->close();
 
 }
 ?>
-
-
 
 
 
