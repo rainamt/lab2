@@ -73,7 +73,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 $servername = "localhost";
 $username = "rterania";
 $password = "";
-$dbname = "mydb";
+$dbname = "myrequests";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
