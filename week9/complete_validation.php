@@ -111,9 +111,9 @@ echo $style;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "commission";
+$username = "mi212";
+$password = "mi212";
+$dbname = "mi212";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
