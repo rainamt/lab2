@@ -22,7 +22,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "name: " . $row["fname"]. "<br>email: " . $row["email"]. "<br>payment: " . $row["payment"]. "<br>comment:  " . $row["comment"]. "<br>style: " . $row["style"]. "<br>";
+        echo "name: " . $row["firstname"]. "<br>email: " . $row["email"]. "<br>payment: " . $row["payment"]. "<br>comment:  " . $row["comment"]. "<br>style: " . $row["style"]. "<br>";
     }
 } else {
     echo "0 results";
