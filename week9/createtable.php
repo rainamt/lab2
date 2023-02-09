@@ -4,9 +4,9 @@
 
 <?php
 $servername = "localhost";
-$username = "mi212";
-$password = "mi212";
-$dbname = "mi212";
+$username = "webprogmi212";
+$password = "webprogmi212";
+$dbname = "webprogmi212";
 
 // Create connection
 $conn = new mysqli ($servername, $username, $password, $dbname);
