@@ -1,4 +1,4 @@
-ines (10 sloc)  262 Bytes
+
 
 <?php
 $servername = "localhost";
